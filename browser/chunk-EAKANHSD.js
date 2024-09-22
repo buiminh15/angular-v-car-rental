@@ -1,0 +1,1 @@
+import{Fb as p,Y as n,fb as o,gb as a,xb as i}from"./chunk-PLVQ6ST2.js";var m=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=n({type:e,selectors:[["app-page-not-found"]],standalone:!0,features:[p],decls:2,vars:0,template:function(t,d){t&1&&(o(0,"p"),i(1,"page-not-found works!"),a())}})}}return e})();export{m as PageNotFoundComponent};
