@@ -1,27 +1,18 @@
-# VCarRental
+### Project Description
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+This project is developed using **Angular 18** as the main framework for building dynamic web applications. It incorporates **Tailwind CSS** for utility-first, responsive design, making it easy to implement custom layouts and styles. Additionally, **PrimeNG** is used to provide a set of rich, customizable UI components that enhance the user experience.
 
-## Development server
+For data visualization, the project leverages **Chart.js** to create interactive charts and graphs, enabling users to analyze data visually in a seamless and intuitive manner.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#### Key Technologies
 
-## Code scaffolding
+- **Angular 18**: Framework for building modern web applications.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **PrimeNG**: Rich UI component library for Angular.
+- **Chart.js**: JavaScript library for creating charts and data visualizations.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project is inspired by the incredible design of the Car Rental Company Dashboard UI. A big shoutout to the talented creator of this design! Your work is truly remarkable and serves as a fantastic foundation for our project.
 
-## Build
+https://www.figma.com/community/file/1176998037566975720/car-rental-company-dashboard-ui
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Thank you for your contributions to the design community! 🚀✨
