@@ -1,0 +1,12 @@
+:host ::ng-deep {
+  .p-focus,
+  .p-inputtext {
+    box-shadow: none;
+  }
+
+  .car-number {
+    span[role="combobox"] {
+      width: 130px;
+    }
+  }
+}

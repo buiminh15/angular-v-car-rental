@@ -3,7 +3,18 @@
     <app-statistics></app-statistics>
   </div>
 
-  <div class="col-span-9">
-    test
+  <div class="col-span-9 px-7 pt-7 pb-6 flex flex-col gap-5">
+    <section class="flex items-center gap-10 justify-end">
+      <i class="pi pi-bell text-2xl cursor-pointer" severity="danger" pBadge></i>
+
+      <p-iconField iconPosition="right">
+        <p-inputIcon styleClass="pi pi-search" />
+        <input type="text" pInputText placeholder="Search here" class="py-3 pr-7 pl-8 shadow" />
+      </p-iconField>
+    </section>
+
+    <app-car-availability></app-car-availability>
+    <app-live-car-status></app-live-car-status>
+    <app-earning-summary></app-earning-summary>
   </div>
 </div>

@@ -1,0 +1,32 @@
+<section class="px-7 pt-8 pb-10 shadow-lg rounded-lg flex flex-col gap-4">
+  <h4 class="font-semibold">Car Availablity</h4>
+
+  <div class="flex items-center gap-6">
+    <div class="flex items-center border-[#DEDEDE] rounded-lg border-[1px] pl-4 car-number">
+      <i class="pi pi-car text-xl text-[#656575]"></i>
+      <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" placeholder="Car number"
+        class="border-none outline-none focus:outline-none focus:shadow-none " [showClear]="true" />
+    </div>
+
+    <div class="flex border-[#DEDEDE] rounded-lg border-[1px]">
+      <div class="flex items-center  pl-4 car-number h-12 gap-3">
+        <i class="pi pi-calendar text-xl text-[#656575]"></i>
+        <p-calendar class="border-none outline-none focus:outline-none focus:shadow-none " inputId="calendar-timeonly"
+          [(ngModel)]="date" placeholder="Select date" [showClear]="true" [readonlyInput]="true" />
+      </div>
+      <div class="flex items-center border-l-[#DEDEDE] border-l-[1px] pl-4 car-number h-12 gap-3">
+        <i class="pi pi-clock text-xl text-[#656575]"></i>
+        <p-calendar class="border-none outline-none focus:outline-none focus:shadow-none " inputId="calendar-timeonly"
+          [(ngModel)]="time" [timeOnly]="true" placeholder="Select time" [showClear]="true" [readonlyInput]="true" />
+      </div>
+    </div>
+
+    <button
+      class="bg-blue-500 rounded px-9 text-white py-3 hover:bg-blue-400 transition ease-linear duration-300 ml-auto">
+      Check
+    </button>
+
+  </div>
+
+
+</section>
