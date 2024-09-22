@@ -1,0 +1,58 @@
+<div class="px-8 py-7 bg-color-custom-beige h-full flex flex-col gap-4">
+  <section class="today">
+    <p class="font-medium text-xl leading-8 text-[#525256]">Todays Statistics</p>
+    <p class="text-sm text-[#A3A3A3] leading-5">{{today | date: 'EEE, dd MMM, yyyy, hh.mm a'}}</p>
+  </section>
+
+  <app-card-statistics [title]="'income'" [amount]="9460" [percentage]="-1.5"
+    [lastWeekAmount]="1003"></app-card-statistics>
+  <app-card-statistics [title]="'expense'" [amount]="5660" [percentage]="2.5"
+    [lastWeekAmount]="1003"></app-card-statistics>
+
+  <section class="chart-statistics bg-white rounded-lg p-6 flex flex-col gap-6 shadow-sm">
+    <div class="flex items-center justify-between">
+      <p class="text-[#656575] font-medium text-lg leading-6">Hire vs Cancel</p>
+      <span class="bg-[#F8F7F1] rounded-sm px-2 py-1 text-[#656575] text-xs leading-4">Today</span>
+    </div>
+
+    <div class="chart flex justify-center">
+      <p-chart type="doughnut" [data]="data" [options]="options" />
+    </div>
+
+    <ul class="flex flex-col gap-2">
+      <li class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-4 aspect-square bg-blue-500 rounded-full"></div>
+          <span class="texxt-[#1A1919]">Total Hired</span>
+        </div>
+
+        <div>
+          <span class="text-[#1A1919]">{{dataChart[0] / (dataChart | sum) * 100}}%</span>
+          <i class="pi pi-arrow-up text-green-500 text-sm ml-1 font-bold"></i>
+        </div>
+      </li>
+      <li class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-4 aspect-square bg-green-500 rounded-full"></div>
+          <span class="texxt-[#1A1919]">Total Cancelled</span>
+        </div>
+
+        <div>
+          <span class="text-[#1A1919]">{{dataChart[1] / (dataChart | sum) * 100}}%</span>
+          <i class="pi pi-arrow-up text-green-500 text-sm ml-1 font-bold"></i>
+        </div>
+      </li>
+      <li class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="w-4 aspect-square bg-red-500 rounded-full"></div>
+          <span class="texxt-[#1A1919]">Total Pending</span>
+        </div>
+
+        <div>
+          <span class="text-[#1A1919]">{{dataChart[2] / (dataChart | sum) * 100}}%</span>
+          <i class="pi pi-arrow-down text-red-500 text-sm ml-1 font-bold"></i>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>

@@ -1,0 +1,24 @@
+<section class="bg-white px-7 pb-5 pt-6 shadow-sm rounded-lg">
+  <div class="flex items-center justify-between">
+    <span class="capitalize text-[#656575] font-medium text-lg leading-6 ">{{title}}</span>
+
+    <span class="rounded-sm bg-[#F4F5F7] text-xs text-[#656575] px-2 py-1">Today</span>
+  </div>
+
+  <hr class="border-t-[#a3a3a333] my-3">
+
+  <div class="flex items-end justify-between">
+    <span class="text-[#01150C] text-[28px] font-bold leading-10">{{ amount | currency:'USD':'symbol':'1.2-2' }}</span>
+
+    <div class="flex items-center gap-1" [ngClass]="percentage < 0 ? 'text-red-500' : 'text-green-500'">
+      <i class="pi " [ngClass]="percentage < 0 ? 'pi-arrow-down' : 'pi-arrow-up'"></i>
+      <span>{{percentage < 0 ? -percentage : percentage }}%</span>
+    </div>
+  </div>
+  <p class="text-[#656575] text-sm leading-6 mt-2">Compared to $5240 yesterday</p>
+
+  <div class="flex items-center justify-between">
+    <p>Last week {{title}}</p>
+    <span class="text-[#525256] text-sm font-medium leading-6">{{ amount | currency:'USD':'symbol':'1.2-2' }}</span>
+  </div>
+</section>

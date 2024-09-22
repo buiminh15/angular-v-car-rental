@@ -1,0 +1,43 @@
+<div class="bg-color-custom-black h-full text-white p-6 flex flex-col justify-between side-menu">
+  <ng-container>
+    <div class="logo px-2 py-6 flex items-center gap-1">
+      <img src="assets/icons/logo.svg" alt="logo" class="">
+      <span class="font-bold text-[26px] uppercase">car rent</span>
+    </div>
+
+    <nav>
+      <ul class="flex flex-col gap-2">
+        @for (item of menu; track item.id) {
+        <li class="">
+          <a class="flex items-center gap-3 px-4 py-3" [routerLink]="item.link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+            <div class="icon" [innerHTML]="item.icon"></div>
+            <span class="item-name">{{item.name}}</span>
+          </a>
+        </li>
+        }
+
+        <hr class="my-4 border-gray">
+
+        <li class="">
+          <a class="flex items-center gap-3 px-4 py-3">
+            <span class="text-gray">Report</span>
+          </a>
+        </li>
+
+        @for (item of reportMenu; track item.id) {
+        <li class="">
+          <a class="flex items-center gap-3 px-4 py-3" [routerLink]="item.link" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+            <div class="w-6" [innerHTML]="item.icon"></div>
+            <span class="item-name">{{item.name}}</span>
+          </a>
+        </li>
+        }
+      </ul>
+    </nav>
+  </ng-container>
+
+  <p-button label="Logout" icon="pi pi-sign-out" (click)="logout()"
+    class=" w-full flex items-center justify-center py-3 rounded-lg cursor-pointer bg-gray-light mt-auto my-8" />
+</div>
